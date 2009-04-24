@@ -1,0 +1,27 @@
+<h1>Editar Contato: <?php echo $contact["cliente"]; ?></h1> 
+
+<form action="<?php echo Mapper::url("/contacts/edit/{$contact["id"]}") ?>" method="post" accept-charset="utf-8">
+
+	
+	Nome:<input type="text" name="cliente" value="<?php echo $contact["cliente"] ?>" id="cliente"><br />
+	Contato:<input type="text" name="contato" value="<?php echo $contact["contato"] ?>" id="contato"><br />
+	Fone:<input type="text" name="fone" value="<?php echo $contact["fone"] ?>" id="fone"><br />
+	Celular:<input type="text" name="celular" value="<?php echo $contact["celular"] ?>" id="celular"><br />
+	Email:<input type="text" name="email" value="<?php echo $contact["email"] ?>" id="email"><br />
+	
+	
+
+	<p> <button type="submit">Salvar</button> </p>
+</form>
+<?php if(!empty($contact["id"])): ?>
+	<?php echo $html->link("Voltar", "/contacts/read/{$contact['id']}"); ?>
+<?php else: ?>
+	<?php echo $html->link("Voltar", "/contacts/"); ?>
+<?php endif; ?>
+
+
+
+
+
+
+

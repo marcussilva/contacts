@@ -1,0 +1,11 @@
+<?php echo $contact["id"]; ?><br />
+<?php echo $contact["contato"]; ?><br />
+<?php echo $contact["fone"]; ?><br />
+<?php echo $contact["celular"]; ?><br />
+<?php echo $contact["email"]; ?><br />
+
+
+	
+<?php echo $html->link("Editar", "/contacts/edit/{$contact['id']}"); ?> 
+<?php echo $html->link("APAGAR", "/contacts/delete/{$contact['id']}"); ?> 
+<?php echo $html->link("Voltar", "/contacts/"); ?>
