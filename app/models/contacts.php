@@ -1,7 +1,7 @@
 <?php
 
 	class Contacts extends AppModel{
-		//public $hasOne = array("Branches");
+		public $hasMany = array("Branches");
 		
 	}
 	

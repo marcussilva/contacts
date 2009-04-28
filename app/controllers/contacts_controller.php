@@ -2,16 +2,25 @@
 
 	class ContactsController extends AppController {
 		public $helpers = array("Html", "Form");
+		public $components = array("Auth");
+
+		public function beforeFilter(){
+			$this->AuthComponent->deny("*");
+			$this->AuthComponent->check();
+		}
 		
 		function index(){
-			$this->pageTitle = "Contacts Spaghetti";
+			$this->pageTitle = "Contacts";
 			$this->set("contatos", $this->Contacts->findAll());
+			//pr($this->set("contatos", $this->Contacts->findAll()));
+			//exit();
 		}
 		
 		function read($id = null){
 			
-			pr($this->set("contact", $this->Contacts->findById($id)));
-			exit();
+			$this->set("contact", $this->Contacts->findById($id));
+			//pr($this->set("contact", $this->Contacts->findById($id)));
+			//exit();
 			
 		}
 		

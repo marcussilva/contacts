@@ -1,16 +1,6 @@
 <?php
-
-	
-	
 	echo $form->create();
-	echo $form->input("username", "", array() );
-	echo $form->input("password", "", array("type"=>"password") );
+	echo $form->input("username");
+	echo $form->input("password", null, array("type"=>"password"));
 	echo $form->close("Entrar");
-	
-	
-	if(isset($authError)):
-		 echo "Login incorreto. Tente novamente.";
-		 //echo $authError;
-	endif;
-
 ?>

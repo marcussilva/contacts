@@ -1,50 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 2.9.2
--- http://www.phpmyadmin.net
--- 
--- Servidor: localhost
--- Tempo de Geração: Abr 23, 2009 as 11:39 PM
--- Versão do Servidor: 5.0.27
--- Versão do PHP: 5.2.1
--- 
--- Banco de Dados: `spaghetti`
--- 
-
--- --------------------------------------------------------
-
--- 
--- Estrutura da tabela `branches`
--- 
-
-CREATE TABLE `branches` (
-  `id` int(11) NOT NULL auto_increment,
-  `branch_name` varchar(200) NOT NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
-
--- 
--- Extraindo dados da tabela `branches`
--- 
-
-INSERT INTO `branches` VALUES (10, 'Móveis');
-INSERT INTO `branches` VALUES (9, 'Médicos/Hospitais');
-INSERT INTO `branches` VALUES (8, 'Material Eletrico');
-INSERT INTO `branches` VALUES (7, 'Material de Construção');
-INSERT INTO `branches` VALUES (6, 'Iluminação');
-INSERT INTO `branches` VALUES (5, 'Ferragista');
-INSERT INTO `branches` VALUES (4, 'Farmácias');
-INSERT INTO `branches` VALUES (3, 'Diversos');
-INSERT INTO `branches` VALUES (2, 'Alumínio');
-INSERT INTO `branches` VALUES (1, 'Advogados');
-INSERT INTO `branches` VALUES (11, 'Pintura');
-INSERT INTO `branches` VALUES (12, 'Representantes');
-INSERT INTO `branches` VALUES (13, 'Tecnologia');
-
--- --------------------------------------------------------
-
--- 
--- Estrutura da tabela `contacts`
--- 
 
 CREATE TABLE `contacts` (
   `id` int(11) NOT NULL auto_increment,
@@ -55,13 +8,13 @@ CREATE TABLE `contacts` (
   `email` varchar(200) NOT NULL,
   `branch_id` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=387 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=387 ;
 
 -- 
 -- Extraindo dados da tabela `contacts`
 -- 
 
-INSERT INTO `contacts` VALUES (1, 'Adebar Osório de Souza', 'Dr. Adebar Osório OAB-GO 7954', '3215-1324 / 3941-6785', '9679-4359', 'adebarosorio@hotmail.com', 1);
+INSERT INTO `contacts` VALUES (1, 'Adebar OsÃ³rio de Souza', 'Dr. Adebar  OAB-GO 7954', '3215-1324 / 3941-6785', '9679-4359', 'adebarosorio@hotmail.com', 1);
 INSERT INTO `contacts` VALUES (2, 'Dr. Eleven Teles Evangelista Silva', 'Eleven Teles ', '3271-2690', '9959-7152', 'elevanteles@hotmail.com', 1);
 INSERT INTO `contacts` VALUES (3, 'Advocacia Lisboa', 'José dos Reis Filho OAB-GO 19.005', '3212-9314', '9997-9789', 'NT', 1);
 INSERT INTO `contacts` VALUES (4, 'JR Advocacia', 'João Bosco / Rodrigo Gonçalves', '3241-3233', 'NT', 'jradvoc@terra.com.br', 1);
@@ -461,10 +414,27 @@ CREATE TABLE `users` (
   `email` varchar(200) NOT NULL,
   `last_login` datetime NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 -- 
 -- Extraindo dados da tabela `users`
 -- 
 
 INSERT INTO `users` VALUES (3, 'marcus', 'marcussilva', '123', 'marcus.mos@gmail.com', '2009-04-05 22:29:51');
+
+-- 
+-- Restrições para as tabelas dumpadas
+-- 
+
+-- 
+-- Restrições para a tabela `branches`
+-- 
+--ALTER TABLE `branches`
+--ADD CONSTRAINT `branches_branches_id` FOREIGN KEY (`id`) REFERENCES `contacts` (`branch_id`);
+
+-- 
+-- Restrições para a tabela `contacts`
+--
+--ALTER TABLE `contacts`
+--ADD CONSTRAINT `contacts_branche_id` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`id`),
+--ADD CONSTRAINT `contacts_ibfk_1` FOREIGN KEY (`branch_id`) REFERENCES `branches` (`id`);
