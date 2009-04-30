@@ -2,15 +2,9 @@
 
 	class ContactsController extends AppController {
 		public $helpers = array("Html", "Form");
-		public $components = array("Auth");
-
-		public function beforeFilter(){
-			$this->AuthComponent->deny("*");
-			$this->AuthComponent->check();
-		}
 		
 		function index(){
-			$this->pageTitle = "Contacts";
+			$this->pageTitle = "Contacts Manager - Home";
 			$this->set("contatos", $this->Contacts->findAll());
 			//pr($this->set("contatos", $this->Contacts->findAll()));
 			//exit();

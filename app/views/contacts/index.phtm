@@ -11,8 +11,8 @@
 <body>
 	
 
-<h1 id="contatos">Contatos</h1>
-<?php echo $html->link("Logout", "/users/logout/");?><br />
+<h1 id="contatos">Contacts Manager -  Home</h1>
+<?php //echo $html->link("Logout", "/users/logout/");?><br />
 <?php echo $html->link("Add", "/contacts/add"); ?>
 
 <ol>

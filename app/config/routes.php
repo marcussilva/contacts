@@ -21,4 +21,7 @@ Mapper::connect("/", "/contacts");
  */
 #Mapper::prefix("admin");
 
+Mapper::connect("/login", "/users/login");
+Mapper::connect("/logout", "/users/logout");
+
 ?>

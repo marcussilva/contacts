@@ -1,6 +1,6 @@
-<?php
-	echo $form->create();
-	echo $form->input("username");
-	echo $form->input("password", null, array("type"=>"password"));
-	echo $form->close("Entrar");
+<h2>Login</h2>
+<?php echo $form->create();
+	echo $form->input("username", "", array("type"=>"text", "label"=>"Username"));
+	echo $form->input("password", "", array("type"=>"password", "label"=>"Password"));
+	echo $form->close("Login");
 ?>

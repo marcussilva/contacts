@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  background: #A2CC2B;
+  font-family: "Lucida Grande", Arial;
+  font-size: 13px;
+  margin: auto;
+  padding: 20px;
+  width: 450px;
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica", Arial;
+}
+
+a {
+	color: #629F00;
+	text-decoration: none;
+}
+
+p {
+	color: #666;
+	font-size: 13px;
+}
+ 
+#page {
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 450px;
+}
+
+#header {
+  background: #EEE;
+  height: 25px;
+  padding: 20px;
+  position: relative;
+}
+
+	#header h1 a {
+	  color: #333;
+      display: block;
+      float: left;
+	  outline: none;
+	  text-decoration: none;
+	  width: 150px;
+	}
+	
+	#header small {
+		color: #666;
+		float: right;
+		text-align: right;
+		width: 180px;
+	}
+ 
+div.error, div.message {
+  background: #FFC;
+  margin: 0 0 10px;
+  padding: 15px;
+}
+ 
+	div.error h2 {
+	  color: #A00;
+	  font-size: 14px;
+	}
+ 
+	div.error p {
+	  color: #333;
+	  font-size: 12px;
+	  padding: 0;
+	}
+	
+	div.message h2 {
+	  color: #4E7F00;
+	  font-size: 14px;
+	}
+
+#content {
+  padding: 20px;
+}
+
+#content h2 {
+  color: #777;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+	#content h2 span {
+		font-size: 15px;
+	}
+
+#content form {}
+
+	#content form label {
+	  color: #666;
+	  display: block;
+	  font-size: 14px;
+	  padding-bottom: 3px;
+	  margin-bottom: 10px;
+	}
+
+	#content form input[type=text],
+	#content form input[type=password] {
+	  font-size: 18px;
+	  padding: 5px;
+	  width: 390px;
+	}
+	
+	#content form textarea {
+	  font-size: 13px;
+	  height: 100px ;
+	  padding: 5px;
+	  width: 390px;
+	}
+	
+#content dl {
+	background: #FAFAFA;
+	border-bottom: 1px dotted #CCC;
+	color: #333;
+	font-size: 13px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+	#content dl:hover {
+		background: #FFC;
+	}
+	
+	#content dl a.edit {
+		float: right;
+		font-size: 11px;
+		display: none;
+	}
+	
+	#content dl:hover a.edit {
+		display: inline;
+	}
+
+	#content dt {
+		font-weight: bold;
+	}
+	
+	#content dd {
+		font-size: 11px;
+		width: 360px;
+	}
+	
+	#content .delete {
+		color: #CCC;
+		display: block;
+		float: right;
+		padding: 2px 4px;
+		margin-top: -15px;
+	}
+	
+		#content .delete:hover {
+			background: #EEE;
+			color: #C00;
+		}
+.spaghetti {
+	color: #FFF;
+	display: block;
+	font-size: 9px;
+	margin-left: 15px;
+	outline: none;
+	width: 80px;
+}

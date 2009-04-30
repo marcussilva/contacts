@@ -2,12 +2,15 @@
 
 <form action="<?php echo Mapper::url("/contacts/edit/{$contact["id"]}") ?>" method="post" accept-charset="utf-8">
 
+	<label for="nome">Nome:<br /><input type="text" name="cliente" value="<?php echo $contact["cliente"] ?>" id="cliente"><br /></label>
+	<label for="contato">Contato:<br /><input type="text" name="contato" value="<?php echo $contact["contato"] ?>" id="contato"><br /></label>
+	<label for="fone">Fone:<br /><input type="text" name="fone" value="<?php echo $contact["fone"] ?>" id="fone"><br /></label>
+	<label for="celular">Celular:<br /><input type="text" name="celular" value="<?php echo $contact["celular"] ?>" id="celular"><br /></label>
+	<label for="email">Email:<br /><input type="text" name="email" value="<?php echo $contact["email"] ?>" id="email"><br /></label>
 	
-	Nome:<input type="text" name="cliente" value="<?php echo $contact["cliente"] ?>" id="cliente"><br />
-	Contato:<input type="text" name="contato" value="<?php echo $contact["contato"] ?>" id="contato"><br />
-	Fone:<input type="text" name="fone" value="<?php echo $contact["fone"] ?>" id="fone"><br />
-	Celular:<input type="text" name="celular" value="<?php echo $contact["celular"] ?>" id="celular"><br />
-	Email:<input type="text" name="email" value="<?php echo $contact["email"] ?>" id="email"><br />
+	
+	
+	
 	
 	
 
